@@ -103,4 +103,48 @@ const filmy = [
 			'Na zámek v podhůří Krkonoš přijíždí jeho nový majitel Štěpán se svojí snoubenkou, krásnou komtesou Blankou, a mladším bratrem Adamem. Cestou kočár nešťastně srazí kolemjdoucí dívku, Adam jí pomůže a ona se do něj zamiluje. Na zámku Adam objeví starou vlašskou knihu, která by měla obsahovat cestu k pokladům. Tajemné značky vlašské knihy však nedokáže vyluštit ani národopisec Jiráček, který v kraji sbírá pověsti a nevychází z údivu nad tím, že zdejší lidé stále věří v Krakonoše. Na zámku se objeví záhadný cizinec a nabídne Štěpánovi, že jej k pokladu za určitých podmínek dovede. Výprava do hor může začít. Naplní se Liduščina láska k Adamovi? Jakou záhadu skrývá starý obraz na zámku Hůrka a co strašlivého se v horách kdysi odehrálo? A kdo je vlastně Krakonoš a jaké je jeho největší tajemství? (csfd.cz, Česká televize)',
 		premiera: '2022-12-24',
 	},
+	{
+		id: 'poor-things',
+		nazev: 'Chudáčci',
+		plakat: {
+			url: 'https://image.pmgstatic.com/cache/resized/w420/files/images/film/posters/168/416/168416248_99popv.jpg',
+			sirka: 420,
+			vyska: 592,
+		},
+		ochutnavka: 'Americký surrealistický sci-fi komediální film.',
+		popis:
+			'Od režiséra Yorgose Lanthimose a producentky Emmy Stone přichází neuvěřitelný příběh o fantastickém vývoji Belly Baxter, mladé ženy, kterou k životu vrátil geniální a nekonvenční vědec Dr. Godwin Baxter. Pod Baxterovou ochranou Bella touží po poznání. Hladovějící po zkušenostech, které jí chybí, uteče s Duncanem Wedderburnem, mazaným a zhýralým právníkem, do víru dobrodružství napříč kontinenty. Nepodléhajíc předsudkům své doby se Bella zasazuje za rovnoprávnost a svobodu. (csfd.cz)',
+		premiera: '2023-12-08',
+	},
 ]
+
+
+// 4) seznam filmů s kartami se všemi výše uvedenými filmy (vč. bonusového)
+// 5) zobrazení relevantních informací o filmu na stránce s detailem (kroky 1 a 2)
+
+const seznamFilmu = document.querySelector('#seznam-filmu')
+seznamFilmu.innerHTML = ''
+filmy.forEach((film) => {
+	seznamFilmu.innerHTML += `
+			<div class="col">
+				<div class="card">
+					<img
+						src="${film.plakat.url}"
+						width="${film.plakat.width}"
+						height="${film.plakat.height}"
+						class="card-img-top"
+						alt="plakát"
+					/>
+					<div class="card-body">
+						<h5 class="card-title">${film.nazev}</h5>
+						<p class="card-text">
+						${film.ochutnavka}
+						</p>
+						<a href="film.html#${film.id}" class="btn btn-primary">Přehrát</a>
+					</div>
+				</div>
+			</div>
+		`
+})
+
+// pozn. karty nejsou zarovnané = stejné jako v předloze v zadání

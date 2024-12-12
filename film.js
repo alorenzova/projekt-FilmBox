@@ -103,4 +103,75 @@ const filmy = [
 			'Na zámek v podhůří Krkonoš přijíždí jeho nový majitel Štěpán se svojí snoubenkou, krásnou komtesou Blankou, a mladším bratrem Adamem. Cestou kočár nešťastně srazí kolemjdoucí dívku, Adam jí pomůže a ona se do něj zamiluje. Na zámku Adam objeví starou vlašskou knihu, která by měla obsahovat cestu k pokladům. Tajemné značky vlašské knihy však nedokáže vyluštit ani národopisec Jiráček, který v kraji sbírá pověsti a nevychází z údivu nad tím, že zdejší lidé stále věří v Krakonoše. Na zámku se objeví záhadný cizinec a nabídne Štěpánovi, že jej k pokladu za určitých podmínek dovede. Výprava do hor může začít. Naplní se Liduščina láska k Adamovi? Jakou záhadu skrývá starý obraz na zámku Hůrka a co strašlivého se v horách kdysi odehrálo? A kdo je vlastně Krakonoš a jaké je jeho největší tajemství? (csfd.cz, Česká televize)',
 		premiera: '2022-12-24',
 	},
+	{
+		id: 'poor-things',
+		nazev: 'Chudáčci',
+		plakat: {
+			url: 'https://image.pmgstatic.com/cache/resized/w420/files/images/film/posters/168/416/168416248_99popv.jpg',
+			sirka: 420,
+			vyska: 592,
+		},
+		ochutnavka: 'Americký surrealistický sci-fi komediální film.',
+		popis:
+			'Od režiséra Yorgose Lanthimose a producentky Emmy Stone přichází neuvěřitelný příběh o fantastickém vývoji Belly Baxter, mladé ženy, kterou k životu vrátil geniální a nekonvenční vědec Dr. Godwin Baxter. Pod Baxterovou ochranou Bella touží po poznání. Hladovějící po zkušenostech, které jí chybí, uteče s Duncanem Wedderburnem, mazaným a zhýralým právníkem, do víru dobrodružství napříč kontinenty. Nepodléhajíc předsudkům své doby se Bella zasazuje za rovnoprávnost a svobodu. (csfd.cz)',
+		premiera: '2023-12-08',
+	},
 ]
+
+// přidat videa?
+
+/* vyzkoušet export/import, aby nemusely být filmy vypsané 2x:
+export const filmy = [...
+import { filmy } from "./film.js"
+*/
+
+
+// 5) kroky 3-5
+
+const detailFilmu = document.querySelector('#detail-filmu')
+
+const idFilmu = location.hash.slice(1)
+// console.log(idFilmu)
+
+let film
+filmy.forEach((vybranyFilm) => {
+	if (vybranyFilm.id === idFilmu) {
+		film = vybranyFilm
+	}
+})
+// else?
+
+detailFilmu.querySelector('.card-title').textContent = film.nazev
+detailFilmu.querySelector('.card-text').textContent = film.popis
+const plakat = detailFilmu.querySelector('.img-fluid')
+plakat.src = film.plakat.url
+plakat.width = film.plakat.sirka
+plakat.height = film.plakat.vyska
+
+
+// 8) přidání vlastní poznámky
+
+const pridatPoznamku = document.querySelector('#note-form')
+pridatPoznamku.addEventListener('submit', (event) => {
+	event.preventDefault()
+	const textovePole =
+		pridatPoznamku.querySelector('#message-input')
+	if (textovePole.value.length === 0) {
+		textovePole.classList.add('is-invalid')
+		textovePole.focus()
+		return
+	}
+	const souhlasPodminky =
+		pridatPoznamku.querySelector('#terms-checkbox')
+	if (souhlasPodminky.checked === false) {
+		souhlasPodminky.classList.add('is-invalid')
+		souhlasPodminky.focus()
+		return
+	}
+	pridatPoznamku.innerHTML = `<p class="card-text">${textovePole.value}</p>`
+})
+
+
+
+// NEPOVINNÉ ÚKOLY (6, 7, 9)
+
