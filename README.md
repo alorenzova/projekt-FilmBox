@@ -56,7 +56,7 @@ Změňte ikonku tlačítka na křížek, pokud je menu rozbalené a na hamburger
 - HTML ikonky křížku: `<i class="fas fa-xmark"></i>`
 - HTML ikonky hamburgeru: `<i class="fas fa-bars"></i>`
 
-![ellipse.png](../images/hamburger.gif)
+![ellipse.png](projekt-FilmBox/images/hamburger.gif)
 
 ## 4
 
@@ -89,7 +89,7 @@ Na stránce se seznamem filmů vypište karty se všemi filmy z pole `filmy`.
 </div>
 ```
 
-![ellipse.png](../images/seznam.jpeg)
+![ellipse.png](../projekt-FilmBox/projekt-FilmBox/images/seznam.jpeg)
 
 #### Bonus
 
@@ -113,7 +113,7 @@ Zobrazte příslušné informace o filmu na stránce s detailem.
 
 1. Vepište informace (název, popis, plakát) o nalezeném filmu do stránky. Upravte textový obsah a atributy příslušných potomků prvku `#detail-filmu`. Do `.card-text` vepište dlouhý popis filmu.
 
-![ellipse.png](../images/detail.jpeg)
+![ellipse.png](../projekt-FilmBox/images/detail.jpeg)
 
 ## 6
 
