@@ -56,7 +56,9 @@ Změňte ikonku tlačítka na křížek, pokud je menu rozbalené a na hamburger
 - HTML ikonky křížku: `<i class="fas fa-xmark"></i>`
 - HTML ikonky hamburgeru: `<i class="fas fa-bars"></i>`
 
-![ellipse.png](projekt-FilmBox/images/hamburger.gif)
+<div>
+    <img src="/images/hamburger.gif" alt="ellipse" />
+</div>
 
 ## 4
 
@@ -89,7 +91,9 @@ Na stránce se seznamem filmů vypište karty se všemi filmy z pole `filmy`.
 </div>
 ```
 
-![ellipse.png](../projekt-FilmBox/projekt-FilmBox/images/seznam.jpeg)
+<div>
+    <img src="/images/seznam.jpeg" alt="ellipse" />
+</div>
 
 #### Bonus
 
@@ -113,7 +117,10 @@ Zobrazte příslušné informace o filmu na stránce s detailem.
 
 1. Vepište informace (název, popis, plakát) o nalezeném filmu do stránky. Upravte textový obsah a atributy příslušných potomků prvku `#detail-filmu`. Do `.card-text` vepište dlouhý popis filmu.
 
-![ellipse.png](../projekt-FilmBox/images/detail.jpeg)
+<div>
+    <img src="/images/detail.jpeg" alt="ellipse" />
+</div>
+
 
 ## 6
 
@@ -180,8 +187,6 @@ Při přejíždění myší přes hvězdičky zvýrazněte všechny až po tu, n
    1. S událostí `mouseleave` zavolete vaši funkci s poznamenanou hodnotou.
 
 
-![ellipse.png](../images/hodnoceni.gif)
-
 <div>
     <img src="/images/hodnoceni.gif" alt="ellipse" />
 </div>
@@ -206,7 +211,9 @@ Pokud vyživatel něco ve formuláři vynechal, pomozte mu zaměřením příslu
 
 1. V místech, kde přidáváte třídu `is-invalid`, volejte také na formulářovém prvku metodu `.focus()`. Ta například u textového pole přenese kurzor pro psaní rovnou na správné místo, aby uživatel mohl začít psát z klávesnice.
 
-![ellipse.png](../images/poznamka.gif)
+<div>
+    <img src="/images/poznamka.gif" alt="ellipse" />
+</div>
 
 ## 9
 
@@ -257,4 +264,6 @@ Obohaťte video přehrávač vlastními ovládacími prvky.
 
 Skryjte ovládací panel, pokud uživatel po dobu **tří sekund** nepohnul myší ani nestiskl žádnou klávesu. **Využijte časovač**. S každým pohnutím nebo stiskem ho zrušte a nastavte znovu na tři sekundy. Po uplynutí přidejte prvku `.player-controls` třídu `hidden`. Pro opětovné zobrazení (s každým pohybem, stiskem) třídu `hidden` zase odeberte, aby se ovládání zpět objevilo.
 
-![ellipse.png](../images/prehravac.gif)
+<div>
+    <img src="/images/prehravac.gif" alt="ellipse" />
+</div>
