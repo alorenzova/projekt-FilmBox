@@ -182,6 +182,10 @@ Při přejíždění myší přes hvězdičky zvýrazněte všechny až po tu, n
 
 ![ellipse.png](../images/hodnoceni.gif)
 
+<div>
+    <img src="/images/hodnoceni.gif" alt="ellipse" />
+</div>
+
 ## 8
 
 Umožněte uživateli vyplněním formuláře přidat k filmu vlastní poznámku.
